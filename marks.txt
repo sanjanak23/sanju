@@ -1,0 +1,36 @@
+data=[]
+n =int(input("Enter The Number Of Elements:"))
+for i in range(0,n):
+	ele=int (input("Enter Element:"))
+	data.append(ele)
+print("The entered marks are:",data)
+
+nil=data[0]
+for i in range(0,n):
+	if data[i]>nil:
+           nil=data[i]
+print("The Maximum marks are:",nil)
+
+null=data[0]
+for i in range(0,n): 
+	if data[i]<null<0:
+           null=data[i]
+print("The Minimum marks are:",null)
+count=0
+for i in range(0,n):
+	if data[i]== -1:
+            count=count+1   
+print("The number of absent students is:",count)
+
+def avg(data):
+    sum=0
+total=sum(data)
+length=len(data)
+if length>0:
+     avg=total/length
+print("The average marks is",avg)
+
+res=max(set(data), key=data.count)
+print("Most Frequent Marks are: ", str(res))
+
+
